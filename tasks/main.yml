@@ -16,3 +16,7 @@
 
 - name: Create '/etc/dnskeys' directory
   file: path=/etc/dnskeys state=directory owner=named group=dnskeys mode=0750
+
+- name: Create "{{ item.key }}" key
+  template: src=dnskey.j2 dest="/etc/dnskeys/{{ item.key }}" owner=named group=dnskeys mode=0640
+  with_dict: "{{ dns_keys|default({}) }}"

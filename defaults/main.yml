@@ -1,0 +1,14 @@
+---
+#dns_keys:
+#    key_name:
+#        algorithm: hmac-sha256
+#        secret: "secretsecretsecretsecretsecretsecretsecret"
+#
+# Can also be shielded in a vault via something like:
+#dns_keys: "{{ vault_dns_keys }}"
+#
+# (vault file)
+#vault_dns_keys:
+#    key_name:
+#        algorithm: hmac-sha256
+#        secret: "secretsecretsecretsecretsecretsecretsecret"
