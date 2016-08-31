@@ -1,0 +1,18 @@
+---
+- name: Install bind
+  slackpkg: name=bind state=present
+
+- name: Create 'named' group
+  group: name=named gid=53 state=present system=yes
+
+- name: Create 'dnskeys' group
+  group: name=dnskeys gid=58 state=present system=yes
+
+- name: Create 'named' user
+  user: name=named group=named groups=dnskeys uid=53 state=present system=yes home=/var/named shell=/sbin/nologin createhome=no
+
+- name: Chgrp '/etc/rndc.key'
+  file: path=/etc/rndc.key group=named mode=0640
+
+- name: Create '/etc/dnskeys' directory
+  file: path=/etc/dnskeys state=directory owner=named group=dnskeys mode=0750
