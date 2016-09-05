@@ -1,6 +1,6 @@
 {{ ansible_managed | comment }}
 
-key "{{ item.key }}" {
-        algorithm {{ item.value.algorithm }};
-        secret "{{ item.value.secret }}";
+key "{{ key }}" {
+        algorithm {{ value.algorithm }};
+        secret "{{ value.secret }}";
 };

@@ -1,0 +1,3 @@
+---
+- name: Create '{{ key }}' DNS key
+  template: src=dnskey.j2 dest="/etc/dnskeys/{{ key }}" owner=named group=dnskeys mode=0640
