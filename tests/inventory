@@ -1,0 +1,8 @@
+test_dnskey:
+  hosts:
+    localhost
+  vars:
+    test_dnskey:
+      algorithm: hmac-sha256
+      # DON'T USE THIS!
+      secret: "EFh57V/BI2BeR0QqEzBMfBiaGriOK0azJQHle8QkxPE="
