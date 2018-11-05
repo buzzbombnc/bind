@@ -1,8 +1,1 @@
 ---
-# Variables assigned by groups ending in "_dnskey" will be configured via the dnskey.yml task.
-#
-#this_dnskey:
-#   algorithm: hmac-sha256
-#   secret: "secretsecretsecretsecretsecretsecretsecret"
-#
-# It can be stored in a vault as well.
